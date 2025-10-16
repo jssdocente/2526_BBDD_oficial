@@ -9,11 +9,11 @@
 
     **Tabla: `PRESTAMOS_BIBLIOTECA`**
 
-| ID_Prestamo | NIF_Usuario | Nombre_Usuario | Libros_Prestados (ISBN y Título) | Fecha_Prestamo |
-| :--- | :--- | :--- | :--- | :--- |
-| 101 | 12345678A | Ana Sanz | '978-1, Don Quijote', '978-2, La Sombra del Viento'| 2025-10-15 |
-| 102 | 87654321B | Luis Prado | '978-3, Cien Años de Soledad' | 2025-10-16 |
-| 103 | 12345678A | Ana Sanz | '978-1, Don Quijote' | 2025-10-20 |
+    | ID_Prestamo | NIF_Usuario | Nombre_Usuario | Libros_Prestados (ISBN y Título) | Fecha_Prestamo |
+    | :--- | :--- | :--- | :--- | :--- |
+    | 101 | 12345678A | Ana Sanz | '978-1, Don Quijote', '978-2, La Sombra del Viento'| 2025-10-15 |
+    | 102 | 87654321B | Luis Prado | '978-3, Cien Años de Soledad' | 2025-10-16 |
+    | 103 | 12345678A | Ana Sanz | '978-1, Don Quijote' | 2025-10-20 |
 
 #### **Análisis y Solución (Paso a 1FN)**
 
@@ -27,14 +27,15 @@
 
     **Tabla: `PRESTAMOS_BIBLIOTECA` en 1FN**
 
-| ID_Prestamo | NIF_Usuario | Nombre_Usuario | ISBN_Libro | Titulo_Libro | Fecha_Prestamo |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 101 | 12345678A | Ana Sanz | 978-1 | Don Quijote | 2025-10-15 |
-| 101 | 12345678A | Ana Sanz | 978-2 | La Sombra del Viento| 2025-10-15 |
-| 102 | 87654321B | Luis Prado | 978-3 | Cien Años de Soledad| 2025-10-16 |
-| 103 | 12345678A | Ana Sanz | 978-1 | Don Quijote | 2025-10-20 |
+    | ID_Prestamo | NIF_Usuario | Nombre_Usuario | ISBN_Libro | Titulo_Libro | Fecha_Prestamo |
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+    | 101 | 12345678A | Ana Sanz | 978-1 | Don Quijote | 2025-10-15 |
+    | 101 | 12345678A | Ana Sanz | 978-2 | La Sombra del Viento| 2025-10-15 |
+    | 102 | 87654321B | Luis Prado | 978-3 | Cien Años de Soledad| 2025-10-16 |
+    | 103 | 12345678A | Ana Sanz | 978-1 | Don Quijote | 2025-10-20 |
 
-*   **Conclusión:** ¡Y listo! El ejercicio termina aquí. Hemos transformado una tabla no relacional en una que cumple la 1FN. Ahora podríamos definir una clave primaria compuesta, por ejemplo `{ID_Prestamo, ISBN_Libro}`.
+
+**Conclusión:** ¡Y listo! El ejercicio termina aquí. Hemos transformado una tabla no relacional en una que cumple la 1FN. Ahora podríamos definir una clave primaria compuesta, por ejemplo `{ID_Prestamo, ISBN_Libro}`.
 
 ---
 
@@ -48,12 +49,12 @@
     **Tabla: `DETALLE_PEDIDO` (en 1FN)**
     **Clave Primaria (CP):** `{ID_Pedido, ID_Producto}`
 
-| ID_Pedido| ID_Producto| Nombre_Producto| Cantidad | Precio_Unitario | ID_Cliente | Nombre_Cliente | Direccion_Cliente |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| P1001 | A01 | Teclado USB | 1 | 25.50 | C01 | Juan Pérez | Calle Mayor, 1 |
-| P1001 | B02 | Ratón Inalámbrico| 1 | 15.00 | C01 | Juan Pérez | Calle Mayor, 1 |
-| P1002 | A01 | Teclado USB | 2 | 25.50 | C02 | Ana Solís | Av. del Parque, 2|
-| P1003 | C03 | Monitor 24" | 1 | 150.00 | C01 | Juan Pérez | Calle Mayor, 1 |
+    | ID_Pedido| ID_Producto| Nombre_Producto| Cantidad | Precio_Unitario | ID_Cliente | Nombre_Cliente | Direccion_Cliente |
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+    | P1001 | A01 | Teclado USB | 1 | 25.50 | C01 | Juan Pérez | Calle Mayor, 1 |
+    | P1001 | B02 | Ratón Inalámbrico| 1 | 15.00 | C01 | Juan Pérez | Calle Mayor, 1 |
+    | P1002 | A01 | Teclado USB | 2 | 25.50 | C02 | Ana Solís | Av. del Parque, 2|
+    | P1003 | C03 | Monitor 24" | 1 | 150.00 | C01 | Juan Pérez | Calle Mayor, 1 |
 
 #### **Análisis y Solución (Paso a 2FN y 3FN)**
 

@@ -44,18 +44,6 @@
    c. Sus valores deben coincidir con un valor de la clave primaria referenciada o ser nulos (si la columna lo permite).
    d. Solo se pueden definir en tablas que no tengan clave primaria.
 
-**8. Si una tabla se encuentra en 1FN (Primera Forma Normal) y tiene una clave primaria compuesta, ¿qué condición específica debemos comprobar para asegurar que cumple la 2FN?**
-   a. Que no existan dependencias transitivas.
-   b. Que todos los atributos no clave dependan funcionalmente de la clave primaria completa, y no de una parte de ella (dependencia funcional completa).
-   c. Que no haya atributos multivaluados.
-   d. Que todas las claves candidatas sean simples.
-
-**9. ¿Qué define la Forma Normal de Boyce-Codd (FNBC) que la hace más estricta que la 3FN?**
-   a. Ningún atributo, sea clave o no, puede depender de algo que no sea una clave candidata (superclave).
-   b. Elimina los grupos repetitivos.
-   c. Requiere que no existan valores nulos en ninguna columna.
-   d. Se aplica solo cuando hay claves ajenas compuestas.
-
 **10. En la transformación al modelo relacional, si tenemos una Entidad Débil por Identificación dependiente de una Entidad Fuerte, ¿cómo se forma la Clave Primaria (PK) de la tabla débil resultante?**
    a. Se crea un campo autonumérico nuevo como PK.
    b. La PK es únicamente la clave ajena de la entidad fuerte.
@@ -150,10 +138,5 @@
    c. Proporcionan una capa de seguridad restringiendo el acceso a columnas específicas.
    d. Almacenan físicamente una copia de los datos para backup.
 
-**25. Para normalizar una base de datos a 3FN, ¿qué pasos previos son obligatorios?**
-   a. La tabla debe estar ya en 1FN (valores atómicos).
-   b. La tabla debe estar ya en 2FN (eliminación de dependencias parciales).
-   c. Deben haberse creado índices `UNIQUE` para todas las columnas.
-   d. Deben haberse eliminado las dependencias transitivas.
 
 
